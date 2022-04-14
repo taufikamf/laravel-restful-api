@@ -18,7 +18,7 @@ class ProgramController extends Controller
     public function index()
     {
         $data = Program::latest()->get();
-        return response()->json([ProgramResource::collection($data), 'Programs fetched.']);
+        return response()->json([ProgramResource::collection($data), 'Data fetched.']);
     }
 
     /**
@@ -125,6 +125,6 @@ class ProgramController extends Controller
     {
         $program->delete();
 
-        return response()->json('Program deleted successfully');
+        return response()->json('Data deleted successfully');
     }
 }

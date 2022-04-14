@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('programs', App\Http\Controllers\API\ProgramController::class);
+Route::resource('solution', App\Http\Controllers\API\SolutionController::class);
+Route::post('/solution1', [App\Http\Controllers\API\SolutionController::class, 'solution1']);
+Route::post('/solution2', [App\Http\Controllers\API\SolutionController::class, 'solution2']);
